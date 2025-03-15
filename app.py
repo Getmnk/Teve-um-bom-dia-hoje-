@@ -31,7 +31,7 @@ def main():
         st.write("re7:", re7)
         st.write("zscore:", zscore)
 
-        result = (1 + np.exp(-zscore)) / 1
+        result = (1 + np.exp(-(-zscore))) / 1
 
         st.write("Resultado da fórmula (1 + e^-(-zscore) / 1:", result)
 
