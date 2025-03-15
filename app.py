@@ -2,9 +2,11 @@ import pandas as pd
 import streamlit as st
 import numpy as np
 
+def welcome():
 st.title("Prevendo se você teve um bom dia hoje! Responda tudo de 1 até 10")
 st.divider()
 
+def main():
 sono = st.number_input("Digita de 1 até 10 sua Qualidade de Sono hoje", min_value=1, max_value=10, step=1)
 interacoes = st.number_input("Digita de 1 até 10 quantas Interações Sociais você teve hoje", min_value=1, max_value=10, step=1)
 resiliencia = st.number_input("Digita de 1 até 10 seu sentimento de Resiliencia hoje", min_value=1, max_value=10, step=1)
@@ -18,11 +20,14 @@ if st.button("Prever"):
         re5 = re1 + re2 + re3 + re4
         re6 = re5 * 100
         re7 = (re6 - 104.5) / 34.872
-        z = 0.77696 + 1.2566 * re7
-        result = (1 + np.exp(-z)) / 1 
+        zscore = 0.77696 + 1.2566 * re7
+        result = (1 + np.exp(-zscore)) / 1 
         st.success('Resultado da previsão: {}'.format(
         "Você teve um Bom Dia! (ISSO É UM TESTE, PODE DAR RESULTADOS NÃO PRECISOS)" 
         if result >= 0.50 
         else "Você não teve um bom dia. (ISSO É UM TESTE, PODE DAR RESULTADOS NÃO PRECISOS)"
         ))
         print(result)
+
+if __name__ == '__main__':
+    main()
