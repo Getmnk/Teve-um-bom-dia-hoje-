@@ -17,7 +17,7 @@ if st.button("Prever"):
         re4 = pertencimento / 40
         re5 = re1 + re2 + re3 + re4
         re6 = re5 * 100
-        re7 = re6 - 104.5 / 34.872
+        re7 = (re6 - 104.5) / 34.872
         result = 0.77696 + 1.2566 * re7
         st.success('Resultado da previsão: {}'.format("Você teve um Bom Dia! (ISSO É UM TESTE, PODE DAR RESULTADOS NÃO PRECISOS)" if result >= 0.50 else "Você não teve um bom dia. (ISSO É UM TESTE, PODE DAR RESULTADOS NÃO PRECISOS)"))
         print(result)
