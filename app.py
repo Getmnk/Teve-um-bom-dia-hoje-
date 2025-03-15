@@ -34,18 +34,20 @@ def main():
         st.write("zscore:", zscore)
 
         if zscore < 0:
-            result = (1 + np.exp(zscore)) / 1  # Para z negativo, usamos e^z
+            result = (1 + np.exp(zscore)) / 1  
+            result2 = result * 100
         else:
-            result = (1 + np.exp(-zscore)) / 1  # Para z positivo, usamos e^-z
+            result = (1 + np.exp(-zscore)) / 1 
+            result2 = result * 100
 
-        st.write("Resultado da fórmula (1 + e^-zscore) / 1:", result)
+        st.write("Resultado da fórmula (1 + e^-zscore) / 1:", result2)
 
         st.success('Resultado da previsão: {}'.format(
             "Você teve um Bom Dia! (ISSO É UM TESTE, PODE DAR RESULTADOS NÃO PRECISOS)" 
-            if result >= 0.50 
+            if result2 >= 0.50 
             else "Você não teve um bom dia. (ISSO É UM TESTE, PODE DAR RESULTADOS NÃO PRECISOS)"
         ))
-        print(result)
+        print(result2)
 
 if __name__ == '__main__':
     main()
