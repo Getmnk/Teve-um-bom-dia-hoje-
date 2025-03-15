@@ -1,4 +1,4 @@
-import pandas as pd
+import pandas as pd 
 import streamlit as st
 import numpy as np
 
@@ -31,9 +31,12 @@ def main():
         st.write("re7:", re7)
         st.write("zscore:", zscore)
 
-        result = (1 + np.exp(-(-zscore))) / 1
+        if zscore < 0:
+            result = (1 + np.exp(zscore)) / 1  # Para z negativo, usamos e^z
+        else:
+            result = (1 + np.exp(-zscore)) / 1  # Para z positivo, usamos e^-z
 
-        st.write("Resultado da fórmula (1 + e^-(-zscore) / 1:", result)
+        st.write("Resultado da fórmula (1 + e^-zscore) / 1:", result)
 
         st.success('Resultado da previsão: {}'.format(
             "Você teve um Bom Dia! (ISSO É UM TESTE, PODE DAR RESULTADOS NÃO PRECISOS)" 
@@ -44,4 +47,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
 
