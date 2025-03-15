@@ -18,10 +18,10 @@ def main():
     peso_pertencimento = 40
 
     if st.button("Prever"):
-        re1 = sono / 10 * peso_sono  # Sono com peso 30
-        re2 = interacoes / 10 * peso_interacoes  # Interações Sociais com peso 10
-        re3 = resiliencia / 10 * peso_resiliencia  # Resiliência com peso 20
-        re4 = pertencimento / 10 * peso_pertencimento  # Pertencimento com peso 40
+        re1 = sono / peso_sono  # Sono com peso 30
+        re2 = interacoes / peso_interacoes  # Interações Sociais com peso 10
+        re3 = resiliencia / peso_resiliencia  # Resiliência com peso 20
+        re4 = pertencimento / peso_pertencimento  # Pertencimento com peso 40
         re5 = re1 + re2 + re3 + re4
 
         re6 = re5 * 100
@@ -43,7 +43,6 @@ def main():
 
         st.write("Resultado da fórmula de regressão logística:", result)
 
-        # Interpretação do resultado
         if result >= 0.5:
             st.success('Resultado da previsão: Você teve um Bom Dia! (ISSO É UM TESTE, PODE DAR RESULTADOS NÃO PRECISOS)')
         else:
