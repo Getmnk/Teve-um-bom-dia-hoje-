@@ -5,10 +5,10 @@ import numpy as np
 st.title("Prevendo se você teve um bom dia hoje! Responda tudo de 1 até 10")
 st.divider()
 
-sono = st.number_input("Digita de 1 até 10 sua Qualidade de Sono hoje")
-interacoes = st.number_input("Digita de 1 até 10 quantas Interações Sociais você teve hoje")
-resiliencia = st.number_input("Digita de 1 até 10 seu sentimento de Resiliencia hoje")
-pertencimento = st.number_input("Digita de 1 até 10 seu sentimento de Pertencimento hoje")
+sono = st.number_input("Digita de 1 até 10 sua Qualidade de Sono hoje", min_value=1, max_value=10, step=1)
+interacoes = st.number_input("Digita de 1 até 10 quantas Interações Sociais você teve hoje", min_value=1, max_value=10, step=1)
+resiliencia = st.number_input("Digita de 1 até 10 seu sentimento de Resiliencia hoje", min_value=1, max_value=10, step=1)
+pertencimento = st.number_input("Digita de 1 até 10 seu sentimento de Pertencimento hoje", min_value=1, max_value=10, step=1)
 
 if st.button("Prever"):
         re1 = sono / 30
