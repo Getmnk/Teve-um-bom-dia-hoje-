@@ -33,7 +33,7 @@ def main():
 
         result = (1 + np.exp(-zscore)) / 1
 
-        st.write("Resultado da fórmula (1 + e^-zscore) / 1:", result)
+        st.write("Resultado da fórmula (1 + e^-(-zscore) / 1:", result)
 
         st.success('Resultado da previsão: {}'.format(
             "Você teve um Bom Dia! (ISSO É UM TESTE, PODE DAR RESULTADOS NÃO PRECISOS)" 
