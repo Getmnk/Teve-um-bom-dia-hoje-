@@ -19,8 +19,9 @@ def main():
         re4 = pertencimento / 40
         re5 = re1 + re2 + re3 + re4
         re6 = re5 * 100
-        re7 = (re6 - 104.5) / 34.872
-        zscore = 0.77696 + 1.2566 * re7
+        re7 = re6 - 104.5 
+        re8 = re7 / 34.872
+        zscore = 0.77696 + 1.2566 * re8
 
         st.write("re1:", re1)
         st.write("re2:", re2)
