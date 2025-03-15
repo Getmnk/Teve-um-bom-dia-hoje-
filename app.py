@@ -30,6 +30,7 @@ def main():
         st.write("re5:", re5)
         st.write("re6:", re6)
         st.write("re7:", re7)
+        st.write("re8:", re8)
         st.write("zscore:", zscore)
 
         if zscore < 0:
