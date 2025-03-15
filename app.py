@@ -42,7 +42,7 @@ def main():
 
         st.success('Resultado da previsão: {}'.format(
             "Você teve um Bom Dia! (ISSO É UM TESTE, PODE DAR RESULTADOS NÃO PRECISOS)" 
-            if result2 >= 0.50 
+            if result >= 0.50 
             else "Você não teve um bom dia. (ISSO É UM TESTE, PODE DAR RESULTADOS NÃO PRECISOS)"
         ))
         print(result)
