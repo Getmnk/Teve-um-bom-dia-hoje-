@@ -39,7 +39,7 @@ def main():
         st.write("re8 (Normalização final):", re8)
         st.write("zscore:", zscore)
 
-        result = 1 / ((1 + np.exp(-(-zscore)))
+        result = 1 / ((1 + np.exp(-(-zscore))))
 
         st.write("Resultado da fórmula de regressão logística:", result)
 
