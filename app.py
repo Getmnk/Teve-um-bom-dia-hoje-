@@ -27,7 +27,7 @@ def main():
         re6 = re5 * 100
         re7 = re6 - 104.5
         re8 = re7 / 34.872
-        zscore = 0.77696 + 1.2566 * re8
+        zscore = (0.77696 + 1.2566) * re8
 
         st.write("re1 (Sono ponderado):", re1)
         st.write("re2 (Interações ponderado):", re2)
